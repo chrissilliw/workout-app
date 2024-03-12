@@ -34,7 +34,7 @@ const getWorkout = async (req, res) => {
 
 // Create a workout
 const createWorkout = async (req, res) => {
-    const {title, reps, load, sets }  = req.body
+    const {title, reps, load, set }  = req.body
 
     try {
         const workout = await Workout.create({

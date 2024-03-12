@@ -2,6 +2,7 @@ import { Grid, GridItem, Show } from "@chakra-ui/react";
 import "./App.css";
 import Navbar from "./components/Navbar";
 import WorkoutGrid from "./components/WorkoutGrid";
+import WorkoutForm from "./components/WorkoutForm";
 
 function App() {
   return (
@@ -13,15 +14,15 @@ function App() {
           md: `"nav nav" "main aside"`,
         }}
       >
-        <GridItem area="nav">
+        <GridItem colSpan={4} area="nav">
           <Navbar />
         </GridItem>
-        <GridItem area="main" bg="dodgerblue">
+        <GridItem colSpan={3} area="main" padding={4}>
           <WorkoutGrid />
         </GridItem>
         <Show above="lg">
-          <GridItem area="aside" bg="gold">
-            Aside
+          <GridItem colSpan={1} area="aside" padding={4}>
+            <WorkoutForm />
           </GridItem>
         </Show>
       </Grid>
