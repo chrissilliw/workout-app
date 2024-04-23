@@ -23,7 +23,11 @@ const WorkoutDetails = ({ workout }) => {
   };
   return (
     <>
-      <Card padding={5} borderRadius={20}>
+      <Card
+        padding={5}
+        borderRadius={20}
+        width={{ base: "90%", md: "400px", lg: "450px" }}
+      >
         <HStack justifyContent="space-between">
           <Box>
             <Box>
@@ -34,7 +38,7 @@ const WorkoutDetails = ({ workout }) => {
             </Box>
             <HStack>
               <Stack>
-                <Text fontSize="md">Load</Text>
+                <Text fontSize="md">Vikt</Text>
                 <Text>{workout.load}</Text>
               </Stack>
               <Stack>
@@ -54,7 +58,7 @@ const WorkoutDetails = ({ workout }) => {
             onClick={handleClick}
             cursor="pointer"
           >
-            <FaRegTrashCan padding="20px" color="primary" />
+            <FaRegTrashCan size={26} color="primary" />
           </Box>
         </HStack>
       </Card>

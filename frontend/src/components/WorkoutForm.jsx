@@ -61,10 +61,15 @@ const WorkoutForm = () => {
   });
   return (
     <>
-      <VStack as="form" onSubmit={formik.handleSubmit}>
-        <Heading>Add new Workout</Heading>
+      <VStack
+        as="form"
+        onSubmit={formik.handleSubmit}
+        width={{ base: "90%", md: "350px", lg: "400px" }}
+        py={{ base: "20px", md: "0" }}
+      >
+        <Heading>Lägg till ny övning</Heading>
         <FormControl isInvalid={formik.errors.title} paddingBottom={4}>
-          <FormLabel>Exercise: </FormLabel>
+          <FormLabel>Övning: </FormLabel>
           <Input
             type="text"
             onChange={formik.handleChange}
@@ -74,7 +79,7 @@ const WorkoutForm = () => {
           <FormErrorMessage>{formik.errors.title}</FormErrorMessage>
         </FormControl>
         <FormControl isInvalid={formik.errors.load} paddingBottom={4}>
-          <FormLabel>Load(kg): </FormLabel>
+          <FormLabel>Vikt(kg): </FormLabel>
           <Input
             type="number"
             onChange={formik.handleChange}
@@ -104,7 +109,7 @@ const WorkoutForm = () => {
           <FormErrorMessage>{formik.errors.sets}</FormErrorMessage>
         </FormControl>
         <Button type="submit" size="md">
-          Add Workout
+          Addera övning
         </Button>
       </VStack>
     </>
