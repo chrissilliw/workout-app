@@ -52,13 +52,13 @@ const WorkoutDetails = ({ workout }) => {
             </HStack>
           </Box>
           <Box
-            padding={5}
+            padding={4}
             bg="lightgrey"
             borderRadius="50%"
             onClick={handleClick}
             cursor="pointer"
           >
-            <FaRegTrashCan size={26} color="primary" />
+            <FaRegTrashCan size={24} color="primary" />
           </Box>
         </HStack>
       </Card>
